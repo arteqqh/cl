@@ -22,7 +22,7 @@ jobs:
     - - name: Install Gradle manually
   run: sudo apt-get install gradle -y
 
-    - name: Build project
+    - name: Build with Gradle
       run: ./gradlew assembleDebug
 
     - name: Upload APK
