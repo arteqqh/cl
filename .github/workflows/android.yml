@@ -22,9 +22,12 @@ jobs:
     - - name: Install Gradle manually
   run: sudo apt-get install gradle -y
 
-    - name: Build with Gradle
-      run: ./gradlew assembleDebug
+     - name: Build with Gradle
+  run: |
+    chmod +x gradlew
+    ./gradlew assembleDebug
 
+     
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
